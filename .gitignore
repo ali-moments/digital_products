@@ -160,6 +160,6 @@ cython_debug/
 #.idea/
 
 
-digitalp/settings.py
+digital_products/settings.py
 testing/
 
