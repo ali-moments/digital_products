@@ -162,4 +162,5 @@ cython_debug/
 
 digital_products/settings.py
 testing/
+media/
 
