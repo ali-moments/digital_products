@@ -1,15 +1,11 @@
 from django.db import models
-import random
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.utils.translation import gettext_lazy as _
 from utils.validators import validate_sku
-from django.core.mail import send_mail
-from django.utils import timezone
 
 class Package(models.Model):
     title = models.CharField(_('title'), max_length=50)
     sku = models.CharField(_('stock keeping unit'), max_length=20, validators=[validate_sku])
-    description = models.TextField(_('description', blank=True))
+    description = models.TextField(_('description'), blank=True)
     avatar = models.ImageField(_('avatar'), blank=True, upload_to='packages/')
     is_enable = models.BooleanField(_('is enable'), default=True)
     price = models.PositiveIntegerField(_('price'), default=0)
