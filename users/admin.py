@@ -6,10 +6,12 @@ from django.db.models.query import QuerySet
 from django.http.request import HttpRequest
 from django.utils.translation import gettext_lazy as _
 
+from import_export.admin import ImportExportModelAdmin
+
 from .models import User, Province
 
 
-class MyUserAdmin(UserAdmin):
+class MyUserAdmin(ImportExportModelAdmin, UserAdmin):
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
         (_('Personal info'), {'fields': ('first_name', 'last_name', 'phone_number', 'email')}),
