@@ -160,7 +160,7 @@ cython_debug/
 #.idea/
 
 
-digital_products/settings.py
+digital_products/local_settings.py
 testing/
 media/
 
