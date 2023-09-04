@@ -33,5 +33,8 @@ class Subscription(models.Model):
         db_table = 'subscriptions'
         verbose_name = _('subscription')
         verbose_name_plural = _('subscriptions')
+    
+    def __str__(self) -> str:
+        return f"<{self.user} - {self.package.sku}>"
         
     

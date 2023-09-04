@@ -58,4 +58,6 @@ class Payment(models.Model):
         verbose_name = _('payment')
         verbose_name_plural = _('payments')
         
+    def __str__(self) -> str:
+        return f"<{self.user} - {self.package.sku} - {self.status}>"
         

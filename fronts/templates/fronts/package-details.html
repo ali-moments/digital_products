@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{package}} detail</title>
+    <title>{{package}}</title>
 </head>
 <body>
     <h2>{{ package.title }}</h2>
-
+    <p>description: {{ package.description }}</p>
+    <p>sku: {{ package.sku }}</p>
+    <p>image:</p>
+    <img src="{{ package.avatar }}" alt="no image"><br>
+    <p>is enable: {{ package.is_enable }}</p>
+    <p>price: {{ package.price }}</p>
+    <p>duration: {{ package.duration.days }} days</p>
+    <p>
+        gateways: 
+        <ul>
+            {% for gate in package.gateways.all %}
+                <li>{{ gate }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>created time: {{ package.created_time|date:"d/m/Y, H:i:s" }}</p>
     <a href="/"><button>BACK</button></a>
 </body>
 </html>
