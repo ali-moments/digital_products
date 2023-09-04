@@ -8,7 +8,7 @@ class PhoneNumberValidator(RegexValidator):
     
     
 class SKUValidator(RegexValidator):
-    regex = '^98[a-zA-Z0-9\-\ ]{6,20}$'
+    regex = '^[a-zA-Z0-9\-\ ]{6,20}$'
     message = _('SKU must be alphabetic with 6 to 20 characters')
     code = 'invalid_sku'
     

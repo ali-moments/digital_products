@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'import_export',
 
+    'fronts',
     'products',
     'users',
     'subscriptions',

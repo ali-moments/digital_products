@@ -163,4 +163,4 @@ cython_debug/
 digital_products/local_settings.py
 testing/
 media/
-
+static/

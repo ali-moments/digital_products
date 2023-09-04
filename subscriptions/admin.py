@@ -7,6 +7,7 @@ from .models import Package, Subscription
 @admin.register(Package)
 class PackageAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = ['id', 'title', 'sku', 'is_enable', 'price', 'duration']
+    filter_horizontal = ['gateways']
 
 
 @admin.register(Subscription)

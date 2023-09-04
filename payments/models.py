@@ -16,6 +16,9 @@ class Gateway(models.Model):
         db_table = 'gateways'
         verbose_name = _('gateway')
         verbose_name_plural = _('gateways')
+        
+    def __str__(self) -> str:
+        return self.title
     
     
 class Payment(models.Model):
